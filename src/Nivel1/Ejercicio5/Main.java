@@ -1,6 +1,6 @@
 package Nivel1.Ejercicio5;
 
-import Nivel1.Ejercicio4.ListDirectoryBranchToFile;
+import Nivel1.Ejercicio5.ListDirectoryBranch;
 import java.io.IOException;
 
 public class Main {
@@ -22,7 +22,7 @@ public class Main {
                 String directoryPath = args[1];
                 String outputFilePath = args[2];
 
-                DirectoryInfo directoryInfo = ListDirectoryBranchToFile.listDirectoryBranch(directoryPath);
+                DirectoryInfo directoryInfo = ListDirectoryBranch.listDirectoryBranch(directoryPath);
                 ListDirectoryBranch.serializeObject(directoryInfo, outputFilePath);
                 System.out.println("Directory information serialized successfully to " + outputFilePath);
             } else if (args[0].equalsIgnoreCase("deserialize")) {
