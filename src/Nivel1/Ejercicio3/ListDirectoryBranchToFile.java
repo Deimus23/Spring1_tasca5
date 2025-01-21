@@ -9,6 +9,7 @@ import java.util.Arrays;
 public class ListDirectoryBranchToFile {
     public static void listDirectoryBranch(String path, FileWriter writer) throws IOException {
         File[] listDirectory = new File(path).listFiles();
+
         if (listDirectory != null) {
             Arrays.sort(listDirectory);
             for (File order : listDirectory) {

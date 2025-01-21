@@ -5,13 +5,16 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
-        if (args.length < 2) {
-            System.out.println("Usage:");
-            System.out.println("1. Collect and serialize: java Main collect <directoryPath> <outputFilePath>");
-            System.out.println("2. Deserialize and print: java Main deserialize <inputFilePath>");
-            return;
-        }
-
+        boolean exit=false;
+        do {
+            if (args.length < 2) {
+                System.out.println("Usage:");
+                System.out.println("1. List directory and save to a file: java ListDirectoryBranchToFile <directoryPath> <outputFilePath>");
+                System.out.println("2. Read a text file: java ListDirectoryBranchToFile read <filePath>");
+            }else{
+                exit=true;
+            }
+        }while(!exit);
         try {
             if (args[0].equalsIgnoreCase("collect")) {
 

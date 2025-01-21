@@ -6,14 +6,17 @@ import java.io.IOException;
 import static Nivel1.Ejercicio4.ListDirectoryBranchToFile.listDirectoryBranch;
 import static Nivel1.Ejercicio4.ListDirectoryBranchToFile.readTxtFile;
 
-public class main {public static void main(String[] args) {
-
-    if (args.length < 2) {
-        System.out.println("Usage:");
-        System.out.println("1. List directory and save to a file: java ListDirectoryBranchToFile <directoryPath> <outputFilePath>");
-        System.out.println("2. Read a text file: java ListDirectoryBranchToFile read <filePath>");
-        return;
-    }
+public class Main {public static void main(String[] args) {
+    boolean exit=false;
+    do {
+        if (args.length < 2) {
+            System.out.println("Usage:");
+            System.out.println("1. List directory and save to a file: java ListDirectoryBranchToFile <directoryPath> <outputFilePath>");
+            System.out.println("2. Read a text file: java ListDirectoryBranchToFile read <filePath>");
+        }else{
+            exit=true;
+        }
+    }while(!exit);
 
     try {
         if (args[0].equalsIgnoreCase("read")) {
